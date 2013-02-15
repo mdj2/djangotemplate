@@ -13,9 +13,10 @@ Replace `example` with your project name, and execute:
 
     django-admin.py startproject --template=https://github.com/mdj2/django/archive/master.zip example .
 
-Install the neccessary packages:
+Install the neccessary packages, and make manage.py executable
 
     pip install -r requirements.txt
+    chmod +x manage.py
 
 Replace the settings in `example`/local_settings.py
 
@@ -23,5 +24,12 @@ Replace the settings in `example`/local_settings.py
 
 And run
 
-    python manage.py runserver 192.168.1.100:8000
+    ./manage.py runserver 192.168.1.100:8000
+
+Write over this file with a README specific to your project. Init a repo:
+
+    git init
+    git add .
+    git commit -m "Initial commit"
+
 
