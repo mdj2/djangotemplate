@@ -45,14 +45,14 @@ Write over this file with a README specific to your project. Init a repo:
 ## Environment
 Create a directory for your entire web project. On my own dev VM, I like to create a new user for the project, and use the homedir as the project dir:
 
-    adduser example.com
-    cd ~example.com
+    adduser helloworld.com
+    cd ~helloworld.com
     # get rid of all the dotfile garbage with this:
     # rm -rf .*
 
 Python is usually installed on the OS, and probably has a bunch of third party packages already installed. Generally, it's a good idea to _not_ rely on any packages installed by the OS. Your app should be self contained; only the Python packages that you need should be available. Fortunately, a program called virtualenv makes it easy to setup isolated Python environments for every app you build. In your project directory, create a new virtual environment:
 
-    cd ~example.com
+    cd ~helloworld.com
     virtualenv-2.6 --no-site-packages .env
 
 If you `echo $PATH`, you'll notice that your virtual environment is nowhere to be found. To start using the virtual environment, you need to `source` it:
@@ -80,18 +80,18 @@ to install all the required packages.
 ## Creating a Django Project
 Django comes with a program called django-admin.py that performs various functions. One of them helps you create an initial project. In our home project directory, start a new django project:
 
-    django-admin.py startproject example .
+    django-admin.py startproject helloworld .
 
 I usually name my projects after the website's domain name (minus the tld).
 
-This will create a new directory called `example` in the current working directory. `example` will have some files in it like:
+This will create a new directory called `helloworld` in the current working directory. `helloworld` will have some files in it like:
 
     __init__.py  settings.py  urls.py  wsgi.py
 
-It also creates a file called manage.py in the current working directory. manage.py is essentially the same thing as django-admin.py, except it knows about the project specific settings (i.e. the example/settings.py file).
+It also creates a file called manage.py in the current working directory. manage.py is essentially the same thing as django-admin.py, except it knows about the project specific settings (i.e. the helloworld/settings.py file).
 
 ### Configuration
-Cd into your Django project directory `cd ~example.com/example` and start making changes to the settings.
+Cd into your Django project directory `cd ~helloworld.com/helloworld` and start making changes to the settings.
 #### settings.py
 As of this writing, Django's default settings.py file leaves much to be desired. So we have to make a lot of changes. Open settings.py up in favorite text editor...
 
@@ -150,11 +150,11 @@ Go back into demo_settings.py and set the secret key to the empty string (we don
 ## Directory Structure
 Remember in the settings.py we pointed at some directories like htdocs/static and templates? We still need to create those:
 
-    cd ~example.com
+    cd ~helloworld.com
     mkdir -p htdocs/static/css
     mkdir -p htdocs/static/js
     mkdir -p htdocs/static/img
-    mkdir -p example/templates
+    mkdir -p helloworld/templates
 
 Let's create some dummy files while we're at it:
 
@@ -165,7 +165,7 @@ Let's create some dummy files while we're at it:
     > htdocs/static/robots.txt
 
 ## Git
-In your project root directory `cd ~example.com`:
+In your project root directory `cd ~helloworld.com`:
 
     git init
     echo ".env" >> .gitignore
