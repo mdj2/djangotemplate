@@ -93,7 +93,7 @@ It also creates a file called manage.py in the current working directory. manage
 ### Configuration
 Cd into your Django project directory `cd ~example.com/example` and start making changes to the settings.
 #### settings.py
-As of this writing, Django's default settings.py file leaves much to be desired. So we have to make a lot of changes. Open settings.py up in favorite text editor (hint: it's vim)...
+As of this writing, Django's default settings.py file leaves much to be desired. So we have to make a lot of changes. Open settings.py up in favorite text editor...
 
 Insert these lines at the very top of the file:
 
