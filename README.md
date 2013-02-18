@@ -3,13 +3,13 @@ This is a Django project template that lets you get started on a Django project 
 
 Setup some environment variables so you can just copy and paste the rest of the commands:
 
-    DOMAIN="example.com"
-    PROJECT_NAME="example"
+    DOMAIN="helloworld.com"
+    PROJECT_NAME="helloworld"
 
 Create a directory for your django project and start a virtual environment:
 
     adduser $DOMAIN
-    cd $(getent passwd $DOMAIN | cut -d: -f6)
+    cd $(getent passwd $DOMAIN | cut -d: -f6) # this just gets the user's homedir, and cds to it
     virtualenv-2.6 --no-site-packages .env
     source .env/bin/activate
     pip install django
