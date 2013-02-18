@@ -23,7 +23,7 @@ Install the neccessary packages, and make manage.py executable
     pip install -r requirements.txt
     chmod +x manage.py
 
-Replace the settings in `example`/local_settings.py
+Update the settings in `$PROJECT_NAME`/local_settings.py. Make sure you create the database it tries to connect to.
 
     vim $PROJECT_NAME/local_settings.py
 
