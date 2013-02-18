@@ -27,9 +27,9 @@ Replace the settings in `example`/local_settings.py
 
     vim $PROJECT_NAME/local_settings.py
 
-And run
+And run (assuming 10.0.0.10 is your VM's IP address):
 
-    ./manage.py runserver 192.168.1.100:8000
+    ./manage.py runserver 10.0.0.10:8000
 
 Write over this file with a README specific to your project. Init a repo:
 
