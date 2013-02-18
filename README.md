@@ -16,7 +16,7 @@ Create a directory for your django project and start a virtual environment:
 
 Replace `example` with your project name, and execute:
 
-    django-admin.py startproject --template=https://github.com/mdj2/django/archive/master.zip $PROJECT_NAME .
+    django-admin.py startproject --extension=py,conf --template=https://github.com/mdj2/django/archive/master.zip $PROJECT_NAME .
 
 Install the neccessary packages, and make manage.py executable
 
