@@ -14,7 +14,7 @@ Create a directory for your django project and start a virtual environment:
     source .env/bin/activate
     pip install django
 
-Replace `example` with your project name, and execute:
+Start a new Django project using this git repo as a template:
 
     django-admin.py startproject --extension=py,conf --template=https://github.com/mdj2/django/archive/master.zip $PROJECT_NAME .
 
