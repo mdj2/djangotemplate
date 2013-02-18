@@ -31,8 +31,11 @@ And run (assuming 10.0.0.10 is your VM's IP address):
 
     ./manage.py runserver 10.0.0.10:8000
 
+Point your browser to 10.0.0.10:8000
+
 Write over this file with a README specific to your project. Init a repo:
 
+    echo "# This is my project" > README.md
     git init
     git add .
     git commit -m "Initial commit"
