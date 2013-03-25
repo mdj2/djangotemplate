@@ -38,6 +38,7 @@ Write over this file with a README specific to your project. Init a repo:
     echo "# This is my project" > README.md
     git init
     git add .
+    git add -f .gitignore
     git commit -m "Initial commit"
 
 # Getting Started with Django (from scratch)
