@@ -5,6 +5,8 @@ from django.conf import global_settings
 PROJECT_DIR = os.path.dirname(__file__)
 HOME_DIR = os.path.normpath(os.path.join(PROJECT_DIR, '../'))
 
+SERVER_EMAIL = 'django@pdx.edu'
+
 # allow the use of wildcards in the INTERAL_IPS setting
 class IPList(list):
     # do a unix-like glob match
@@ -16,6 +18,10 @@ class IPList(list):
         return False
 
 INTERNAL_IPS = IPList(['10.*', '192.168.*'])
+
+# for djangocas to work, it needs HttpRequest.get_host(), which requires this setting
+# https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = ['.pdx.edu']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
